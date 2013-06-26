@@ -1,0 +1,43 @@
+﻿/*Tooltip UI component by www.menucool.com */
+
+/*For tooltip box*/
+div#mcTooltip 
+{
+    line-height:20px;
+    border-width: 2px;   
+    color:#DDDDDD; 
+    border-color:#666666;
+    padding:20px;
+    font-size: 12px;
+    font-family: Verdana, Arial;
+    border-radius:6px; /*Rounded corners. N/A for IE 8 and below.*/
+}
+
+div#mcTooltip 
+{
+    background-color:rgba(90, 90, 90, 0.9);
+}
+/* For hyperlink within tooltip */
+div#mcTooltip a { color:#6CF; }
+
+/*The settings below should remain unchanged*/
+div#mcTooltipWrapper {position:absolute;visibility:hidden;overflow:visible;z-index:9999999999;top:-2000px;}
+div#mcTooltip {float:left;border-style:solid;position:relative;overflow:hidden;}
+div.mcTooltipInner {float:left;position:relative;width:auto;height:auto;}
+div#mcttCo {position:absolute;text-align:left;}
+div#mcttCo em, div#mcttCo b {display:block; width:0; height:0;overflow:hidden;}
+
+
+
+/*ticker*/
+
+/*#vertical-ticker ,#vertical-ticker2 ,#vertical-ticker3 ,#vertical-ticker4 ,#vertical-ticker5 {
+	height:300px;
+	overflow:hidden;
+}
+#vertical-ticker li{
+	display:block;
+}
+.titdescrip ul {
+	margin-bottom:30px;	
+}*/

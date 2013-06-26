@@ -1,0 +1,19 @@
+/*only for ie7  */
+@media (max-width: 979px) {
+	.rowCon {
+		margin-top:0px !important;  
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .rowCon {
+		margin-top:0px !important;  
+  }
+}
+@media (max-width: 767px) {
+  .rowCon {
+		margin-top:0px !important;  
+  }
+}
+.brand {
+	margin-bottom:-10px !important;	
+}

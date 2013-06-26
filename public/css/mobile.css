@@ -1,0 +1,157 @@
+@media (max-width: 979px) {
+	.rowCon {
+		margin-top:-20px !important; 
+		margin-left:0px 
+  }
+  .rowCon .customs10 {
+    margin: 0;
+    width: 84.9701%;
+}
+  .updatelabel {
+		margin-left:0;  
+  }
+  .leftMenuContent {
+	margin-left:0%;
+	width:100%;	
+  }
+  .blaclList {
+	padding:0;
+	width:100%;	
+}
+body {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin-left: 0;
+    margin-right: 0;
+}
+.row {
+	margin-left:0;	
+}
+#alertRule {
+	left:5px !important;	
+}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .rowCon {
+		margin-top:-20px !important;  
+  }
+   .rowCon .customs10 {
+    margin: 0 0 0 4%;
+    width: 80.9701%;
+}
+  .updatelabel {
+		margin-left:0;  
+  }
+  .leftMenuContent {
+	margin-left:0%;
+	width:100%;	
+  }
+  .blaclList {
+	padding:0;
+	width:100%;	
+}
+body {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin-left: 0;
+    margin-right: 0;
+}
+}
+@media (max-width: 767px) {
+  .rowCon {
+		margin-top:-20px !important;  
+  }
+  .rowCon .customs10 {
+	width:100%;  
+  }
+  .updatelabel {
+		margin-left:0;  
+  }
+  .leftMenuContent {
+	margin-left:0%;
+	width:100%;	
+  }
+  .errorDiv .inputSearch {
+		width:140px;  
+  }
+  .alertCon {
+	position:absolute;
+	right:0;
+	top:50px;	
+	width:80%;
+	padding:10%;
+	background:#4383b9;
+	border:solid 1px #cccccc;
+	border-right:none;
+}
+.alertCon .alerth2 {
+	position:relative;
+	float:left;
+	width:200px;
+	padding-left:20px;
+	font:normal 1.2em 'HelveticaNeueLT';
+	color:#ffffff;	
+	background:url(../img/alertIcon.png) no-repeat left;
+	margin-bottom:40px;
+}
+#alertRule {
+	left: 0px;
+	top:0px;
+	width:200px;
+	position:absolute;
+}
+.logCon {
+	width:250px;
+}
+.logCon .username {
+	width:210px;	
+}
+.loginCon {
+	width:300px;	
+}
+.generalCon .inputFiledVal {
+	width:160px;	
+}
+.errorImg {
+	width:80%;
+}
+.rowconflL .addnewW {
+	margin-top:15px;	
+}
+#popup_box {
+	width:300px;
+	top:300px;
+	left:10px;	
+}
+.alertCon {
+	top:-580px;	
+}
+.blaclList {
+	padding:0;
+	width:100%;	
+}
+body {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin-left: 0;
+    margin-right: 0;
+}
+#alertRule {
+	left:5px !important;	
+}
+}
+@media (max-width: 1024px) {
+#alertRule {
+	left:280px;
+	top:50px;
+}
+#popup_box, #popup_boxForEdit { 
+	left:280px;
+
+}

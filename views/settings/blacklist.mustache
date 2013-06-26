@@ -1,0 +1,82 @@
+<div class="blaclList">
+    <div class="updateSet">
+        <h2 class="tableHeader">Black List</h2>
+        <div class="rowContent">
+        	<div class="span7">
+                <div class="counter">
+                    <div class="contFiled">
+                   <!-- <form>
+                    	<input class="value" type="text" id="number" value="10"/>
+                        <input type="button" class="plus" onclick="incrementValue()" />
+                        <input type="button"  class="minus" onclick="decrementValue()" />
+                    </form> -->
+                    </div>
+                    <!--end contFiled
+                   <em class="generalConem">records per page</em>-->
+                    <a class="plusWord" id="showPopup" href="#">add new word <img src="/img/plusbg.jpg" alt=""/></a> 
+                    <div class="over">&nbsp;</div>
+                    <div id="popup_box">	<!-- OUR PopupBox DIV-->
+                        <h2 class="addnew">Add new Black List item </h2>
+                        <div class="rowContent pull-left">
+                            <div class="inputCon">
+                                <label class="labelAdd">Add new word</label>
+                                <input id="addWordText" class="addword" type="text" placeholder="type word">
+                            </div>
+                            <!--end inputCon-->
+                        </div>
+                        <!--end rowContent-->
+                        <span class="span12 textAlinC">
+                            <input class="submitWord" id="addNewWordButton" type="button" value="submit">
+                            <input class="cancel" id="popupBoxClose" type="button" value="Cancel">
+                        </span>	
+                    </div>
+                    <!--end popup_box-->
+                </div>
+                <!--end rowContent-->
+            </div>
+        </div>
+        <!--end counter-->
+        <div class="span7 margin0">
+        <div class="tweets">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th width="80%"><em class="headTex">Blacklisted Word</em></th>
+                    <th width="20%"><em class="headTex">Actions</em></th>
+                </tr>
+                <tbody id="blacklist">
+                </tbody>
+            </table>
+            <div id="popup_boxForEdit">
+                <h2 class="addnew">Edit Black List item </h2>
+                <div class="rowContent pull-left">
+                    <div class="inputCon">
+                        <label class="labelAdd">Edit word</label>
+                        <input class="addword" type="text">
+                    </div>
+                    <!--end inputCon-->
+                </div>
+                <!--end rowContent-->
+                <span class="span12 textAlinC">
+                    <input class="submitWord" id="popupBoxClose3" type="button" value="submit">
+                </span>	
+            </div>
+            <!--end popup_box-->
+        </div>
+        <!--end tweets-->
+        </div>
+    </div>
+    <!--end updateSet-->
+    <div class="alertCon">
+        <h2 class="alerth2">A rule has been triggered</h2>
+        <p class="loren">Lorem ipsum dolor sit amet, consectetur adipiscing  lobortis et luctus vitae </p>
+        <a id="alertClose" href="#"><img class="crosIcon" src="/img/croxx-Icon.png" alt="" /></a>
+    </div>
+    <!--end alertCon-->
+</div>
+<!--end blaclList-->
+
+<script>
+	$(document).ready(function(e){
+		loadBlacklist();
+	})
+</script>

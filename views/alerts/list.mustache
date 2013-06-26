@@ -1,0 +1,53 @@
+{{=<% %>=}}
+        <div class="blaclList">
+            <div class="updateSet">
+                <h2 class="tableHeader">
+                    Your Alerts
+                </h2>
+                <p class="generalConP">
+                    The following are the alerts sent to you from the rules you made
+                </p>
+                <div class="span8 margin0">
+                    <div class="tweets">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <th width="40%">
+                                    <em class="headTex">RuleName</em>
+                                </th>
+                                <th width="20%">
+                                    <em class="headTex">Count</em>
+                                </th>
+                                <th width="30%" class="borRNon">
+                                    <em class="headTex">Date Time</em>
+                                </th>
+                                <th width="10%">
+                                    &nbsp;
+                                </th>
+                            </tr>
+                            <tbody id="alert-table"></tbody>
+                        </table>
+                    </div><!--end tweets-->
+                </div>
+            </div><!--end updateSet-->
+            <div class="alertCon">
+                <h2 class="alerth2">
+                    A rule has been triggered
+                </h2>
+                <p class="loren">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing lobortis et luctus vitae
+                </p><a id="alertClose" href="#"><img class="crosIcon" src="img/croxx-Icon.png" alt=""></a>
+            </div><!--end alertCon-->
+        </div><!--end blaclList-->
+        <script id="alertTmpl" type="text/template">
+            <tr>
+                <td width="40%"><em class="tdTex">{{ruleName}}</em></td>
+                <td width="20%"><em class="tdTex">{{count}}</em></td>
+                <td width="30%" class="borRNon"><em class="tdTex">{{formattedDate}}</em></td>
+                <td width="10%"><em class="tdTex"><a href="#" class='delete' data-id="{{_id}}"><img src="img/deleteIcon.jpg" alt=""/></a></em></td>
+            </tr>
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function(e){
+            loadAlerts();
+        })
+        </script>

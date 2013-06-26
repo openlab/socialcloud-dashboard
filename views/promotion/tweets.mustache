@@ -1,0 +1,54 @@
+
+<div class="blaclList">
+    <div class="updateSet">
+        <h2 class="tableHeader">Tweets</h2>
+        <div class="text-right">
+            <a href="#" id="prev" ><< Previous</a>
+            Page #<span id="pno">1</span>
+            <a href="#" id="next">Next >></a>
+        </div>
+        <div class="tweets">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th width="13%"><em class="headTex">Date &amp; Time</em></th>
+                    <th width="60%"><em class="headTex">Tweet</em></th>
+                    <th width="13%"><em class="headTex">Author</em></th>
+                    <th width="12%"><em class="headTex">Actions</em></th>
+                </tr>
+                <tbody id="tweet-table">
+                </tbody>
+                
+            </table>
+        </div>
+        <!--end tweets-->
+    </div>
+    <!--end updateSet-->
+    <div class="alertCon">
+        <h2 class="alerth2">A rule has been triggered</h2>
+        <p class="loren">Lorem ipsum dolor sit amet, consectetur adipiscing  lobortis et luctus vitae </p>
+        <a id="alertClose" href="#"><img class="crosIcon" src="/img/croxx-Icon.png" alt="" /></a>
+    </div>
+    <!--end alertCon-->
+</div>
+<!--end blaclList-->
+
+<script>
+	$(document).ready(function(){
+		loadTweets();
+	});
+
+    var currentPage = 1;
+
+    $('#prev').click(function(e) {
+        
+        currentPage++;
+        loadTweets(currentPage);
+    });
+
+    $('#next').click(function(e) {
+        if(currentPage > 1) {
+            loadTweets(--currentPage);
+
+        }
+    });
+</script>

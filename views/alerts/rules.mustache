@@ -1,0 +1,179 @@
+{{=<% %>=}}
+<script id="ruleTmpl"  type="text/template"> 
+<tr>
+    <td width="20%"><em class="tdTex">{{searchTerm}}</em></td>
+    <td width="50%" class="borRNon"><em class="tdTex">{{ruleName}}</em></td>
+    <td width="10%">
+        <em class="tdTex">
+            <div class="btn-group">
+                <a href="#" class='deleteRule' data-id='{{_id}}'><img class="marginB5" src="/img/deleteIcon.jpg" alt="" /></a>&nbsp;&nbsp;
+              <!--  <a href="#" class='editRule' data-id='{{_id}}'><img class="marginB5" src="/img/edit-Icon.jpg" alt="" /></a> -->
+            </div>
+        </em>
+    </td>
+</tr>
+</script>
+
+
+ <div class="span12 margin0">
+	<div class="blaclList">
+        <div class="updateSet">
+            <h2 class="tableHeader">Your Alerts</h2>
+            <div class="span8 margin0">
+
+                    <a class="plusWord" id="showPopup2" href="#">add new rule <img src="/img/plusbg.jpg" alt=""/></a><br><br>
+                <div class="tweets">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th width="40%"><em class="headTex">Search Term</em></th>
+                            <th width="50%" class="borRNon"><em class="headTex">Rule Name</em></th>
+                            <th width="10%">&nbsp;</th>
+                        </tr>
+                        <tbody id="rule-table"></tbody>
+                    </table>
+                </div>
+                <!--end tweets-->
+            </div>
+            <div class="over">&nbsp;</div>
+            <div id="alertRule">
+            	<form id='contactus' method='post' action=''>
+                    <input type="hidden" name="id" id="id" />
+                <h2 class="edith2">Edit Alert Rule</h2>
+                <div class="rowconflL marginT15">
+                    <label class="alertLabel">Rule Name</label>
+                    <span id='contactus_team_errorloc' class='error'></span>
+                    <input class="alertInput" type="text" name="ruleName" id="ruleName"/>
+                    
+                </div>
+                <div class="rowconflL marginT15">
+                    <label class="alertLabel">Search Term</label>
+                    <span id='contactus_team_errorloc' class='error'></span>
+                    <input class="alertInput" type="text" name="term" id="term"/>
+                    
+                </div>
+                <!--end rowconflL-->
+                <div class="rowconflL">
+                    <label class="alertLabel margin0">Number of timess before sending alert ?</label>
+                    <div class="sliderCon">
+                        <div class="labelCon">
+                            <em>1</em> <em class="text-center">50</em> <em class="text-right">100</em>
+                            <em style="color:green; width: 200px !important">current: <span id="slval">1</span></em>
+                            <input type="hidden" id="threashold" name="threashold" value="1"/>
+                        </div>
+                        <!--end labelCon-->
+                        <div class="rowconflL">
+                            <div id="slider">&nbsp;</div>
+                        </div>
+                    </div>
+                    <!--end sliderCon-->
+                </div>
+                <!--end rowconflL-->
+                <div class="rowconflL">
+                    <label class="alertLabel">Send text/SMS ?</label>
+                    <div class="yesContent">
+                        <div class="yesContent">
+                            <fieldset class="switch">
+                                <label id="off"><input type="radio" class="on_off" name="smsToggle" value="off"/></label>
+                                <label id="on"><input type="radio" class="on_off" name="smsToggle" checked="checked" value="on"/></label>
+                            </fieldset>
+                        </div>
+                        <span id='contactus_sms_errorloc' class='error'></span>
+                        <input class="alertInput" type="text" name="sms" onmouseover="tooltip.pop(this, '#sub1', {position:1, offsetX:-18})"/>
+                    </div>
+                    <!--end yesContent-->
+                </div>
+                <!--end rowconflL-->
+                <div class="rowconflL">
+                    <label class="alertLabel">Send E-mail alert ?</label>
+                    <div class="yesContent">
+                        <div class="yesContent">
+                            <fieldset class="switch2">
+                                <label id="off2"><input type="radio" class="on_off2" name="emailToggle" value="off"/></label>
+                                <label id="on2"><input type="radio" class="on_off2" name="emailToggle"checked="checked"  value="on"/></label>
+                            </fieldset>
+                        </div>
+                        <span id='contactus_email_errorloc' class='error'></span>
+                        <input class="alertInput" type="text" name="email" />
+                    </div>
+                    <!--end yesContent-->
+                </div>
+                <!--end rowconflL-->
+                <div class="rowconflL">
+                    <label class="alertLabel">Send dashboard aler?</label>
+                    <div class="yesContent">
+                        <div class="yesContent">
+                            <fieldset class="switch3">
+                                <label id="off3"><input type="radio" class="on_off3" name="dashToggle" value="off"/></label>
+                                <label id="on3"><input type="radio" class="on_off3" name="dashToggle" checked="checked" selected value="on"/></label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!--end yesContent-->
+                </div>
+                <!--end rowconflL-->
+                <div class="rowconflL marginT15">
+                    <label class="alertLabel">Send mobile app alert?</label>
+                    <div class="yesContent">
+                        <div class="yesContent">
+                            <fieldset class="switch4">
+                                <label id="off4"><input type="radio" class="on_off4" name="mobileToggle" value="off"/></label>
+                                <label id="on4"><input type="radio" class="on_off4" name="mobileToggle" checked="checked" value="on"/></label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!--end yesContent-->
+                </div>
+                <!--end rowconflL-->
+                
+                <div class="rowconflL marginT100">
+                    <span class="span12">
+                        <input class="cancel popupBoxClose2" id="popupBoxClose2" type="button" value="Cancel" />
+                        <input class="cancel save" type="submit" value="Save" />
+                        <!--<input class="cancel test" type='submit' name='Submit' value='Test' />-->
+                    </span>
+                </div>
+                <!--end rowconflL-->
+                <div style="display:none;">
+                <div id="sub1">
+                    <div class="column">            
+                        <p>suggestion goes here<br/> [tooltip]</p>              
+                    </div>
+                </div>
+                <div id="sub2">
+                    <div class="column">
+                        <b>Sed eu duieu</b><br />              
+                        <a href="#">tooltipLink</a><br />
+                    </div>   
+                </div>
+            </div>
+            <!--end hide Info-->
+            </form>
+        </div>
+        <!--end alertRule-->
+        </div>
+        <!--end updateSet-->
+        <div class="alertCon">
+            <h2 class="alerth2">A rule has been triggered</h2>
+            <p class="loren">Lorem ipsum dolor sit amet, consectetur adipiscing  lobortis et luctus vitae </p>
+            <a id="alertClose" href="#"><img class="crosIcon" src="/img/croxx-Icon.png" alt="" /></a>
+        </div>
+        <!--end alertCon-->
+    </div>
+    <!--end blaclList-->
+</div>
+
+<script>
+    $(document).ready(function(e){
+        $("#slider").slider({
+                range: "max",
+                min: 1,
+                max: 100,
+                slide: function( event, ui ) {
+                    $('#slval').text(ui.value);
+
+                    $('#threashold').val(ui.value);
+                },
+            });
+        loadRules();
+    })
+</script>

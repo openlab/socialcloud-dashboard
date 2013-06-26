@@ -1,0 +1,62 @@
+<div class="blaclList">
+    <div class="updateSet">
+        <h2 class="tableHeader">General</h2>
+        <p class="generalConP">The following setting are available for Confoo Cloud</p>
+        <div class="span7 margin0">
+        <div class="tweets">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th width="26%"><em class="headTex">Setting Name</em></th>
+                    <th width="58%" class="borRNon"><em class="headTex">Setting Name</em></th>
+                    <th width="16%">&nbsp;</th>
+                </tr>
+                <tbody id='setting-body'>
+                
+              	</tbody>
+            </table>
+            <div class="over">&nbsp;</div>
+            <div id="popup_boxForEdit">
+                <h2 class="addnew">Edit Black List item </h2>
+                <div class="rowContent pull-left">
+                    <div class="inputCon">
+                        <label class="labelAdd">Edit word</label>
+                        <input class="addword" type="text">
+                    </div>
+                    <!--end inputCon-->
+                </div>
+                <!--end rowContent-->
+                <span class="span12 textAlinC">
+                    <input class="submitWord" id="popupBoxClose3" type="button" value="submit">
+                </span>	
+            </div>
+            <!--end popup_box-->
+        </div>
+        <!--end tweets-->
+        </div>
+    </div>
+    <!--end updateSet-->
+    <div class="alertCon">
+        <h2 class="alerth2">A rule has been triggered</h2>
+        <p class="loren">Lorem ipsum dolor sit amet, consectetur adipiscing  lobortis et luctus vitae </p>
+        <a id="alertClose" href="#"><img class="crosIcon" src="/img/croxx-Icon.png" alt="" /></a>
+    </div>
+    <!--end alertCon-->
+</div>
+<!--end blaclList-->
+
+
+<script>
+
+$(document).ready(function(e) {
+	$.getJSON('/api/settings', function(json) {
+		console.log(json);
+		$.each(json,function(index, set) {
+			var html = '<tr><td width="26%"><em class="tdTex setting-key">' + set.key + '</em></td><td width="58%" class="borRNon"><em class="tdTex setting-value">' + set.value + '</em></td><td width="16%"><em class="tdTex"><a href="#" class="showPopup3"><img src="/img/edit-Icon.jpg" alt=""></a></em></td></tr>';
+			console.log('appending', set);
+			$('#setting-body').append(html);
+
+		});
+	});
+});
+
+</script>
