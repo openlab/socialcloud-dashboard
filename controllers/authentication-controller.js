@@ -6,7 +6,7 @@ var passport = require('passport'),
 var strategy = new WindowsLiveStrategy({
 	clientID: config.liveClientId,
 	clientSecret: config.liveClientSecret,
-	callbackURL: "http://test-admin.azurewebsites.net/auth/windowslive/callback"
+	callbackURL: config.liveCallbackUrl
 }, function(accessToken, refreshToken, profile, done) {
 	// asynchronous verification, for effect...
 	process.nextTick(function() {
