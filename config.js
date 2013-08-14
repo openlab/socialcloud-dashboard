@@ -6,5 +6,6 @@ module.exports = {
 	mongoPath: '',
 	liveClientId: '',
 	liveClientSecret: '',
+	liveCallbackUrl: '',
 	newRelicKey: ''
 }
